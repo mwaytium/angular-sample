@@ -7,20 +7,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
 
-import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {CrisisCenterModule} from './crisis-center/crisis-center.module';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CrisisListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ComposeMessageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HeroesModule,
+    CrisisCenterModule,
     AppRoutingModule
   ],
   providers: [],
