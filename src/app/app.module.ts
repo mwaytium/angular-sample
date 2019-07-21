@@ -8,10 +8,9 @@ import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import {CrisisCenterModule} from './crisis-center/crisis-center.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
-import {AdminModule} from './admin/admin.module';
 import {AuthModule} from './auth/auth.module';
+import {SelectivePreloadingStrategyService} from './selective-preloading-strategy.service';
 
 @NgModule({
   declarations: [
@@ -24,12 +23,10 @@ import {AuthModule} from './auth/auth.module';
     BrowserAnimationsModule,
     FormsModule,
     HeroesModule,
-    CrisisCenterModule,
-    AdminModule,
     AuthModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SelectivePreloadingStrategyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
