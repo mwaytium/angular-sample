@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Crisis} from '../crisis';
 import {Observable} from 'rxjs';
-import {DialogService} from '../../dialog.service';
+import {DialogService} from '../dialog.service';
 
 @Component({
   selector: 'app-crisis-detail',

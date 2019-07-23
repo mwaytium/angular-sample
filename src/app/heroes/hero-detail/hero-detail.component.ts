@@ -6,6 +6,7 @@ import { switchMap } from 'rxjs/operators';
 import { Hero } from '../hero';
 import {HeroService} from '../hero.service';
 import {Observable} from 'rxjs';
+import {CartService} from '../../cart/cart.service';
 
 @Component({
   selector: 'app-hero-detail',
@@ -18,6 +19,7 @@ export class HeroDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
+              private cartService: CartService,
               private service: HeroService) { }
 
   ngOnInit() {
@@ -25,6 +27,11 @@ export class HeroDetailComponent implements OnInit {
       switchMap((params: ParamMap) =>
         this.service.getHero(params.get('id')))
     );
+  }
+
+  addToCart(hero) {
+    window.alert('Hero has been added to the cart!');
+    this.cartService.addToCart(hero);
   }
 
   gotoHeroes(hero: Hero) {

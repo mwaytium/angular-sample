@@ -5,9 +5,11 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ComposeMessageComponent} from './compose-message/compose-message.component';
 import {AuthGuard} from './auth/auth.guard';
 import {SelectivePreloadingStrategyService} from './selective-preloading-strategy.service';
+import {CartComponent} from './cart/cart.component';
 
 const routes: Routes = [
   { path: 'compose', component: ComposeMessageComponent, outlet: 'popup'},
+  { path: 'cart', component: CartComponent },
   {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule),
